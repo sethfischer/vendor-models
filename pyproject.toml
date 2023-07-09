@@ -38,12 +38,21 @@ python = ">=3.9,<3.11"
 cadquery = "^2.3.1"
 casadi = {version = "^3.5.6rc2", allow-prereleases = true}
 
-
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
 isort = "^5.12.0"
 flake8 = "^6.0.0"
 mypy = "^1.4.1"
+
+[tool.poetry.group.cq-editor]
+optional = true
+
+[tool.poetry.group.cq-editor.dependencies]
+cq-editor = {git = "https://github.com/CadQuery/CQ-editor.git", rev = "4b461fe195d0a4e99b9a6c43b7e1fe0cb4c5e77d"}
+Logbook = "^1.5.3"
+PyQt5 = "^5.15.7"
+pyqtgraph = "^0.12.4"
+spyder = "^5.3.1"
 
 [build-system]
 requires = ["poetry-core"]
