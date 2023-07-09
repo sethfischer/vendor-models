@@ -1,0 +1,1 @@
+"""Waveshare Electronics CAD resources."""
