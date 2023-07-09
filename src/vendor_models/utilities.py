@@ -43,7 +43,7 @@ class CqImport:
         with importlib.resources.as_file(resources_files(resource)) as root_path:
             self.path = root_path / metadata.resource_path
 
-    def workplane(self) -> Workplane:
+    def cq_object(self) -> Workplane:
         """Import STEP file.
 
         Import STEP files as CadQuery Workplane.
