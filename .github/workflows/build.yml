@@ -1,0 +1,28 @@
+name: build
+
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          poetry --version
+
+      - name: Install dependencies
+        run: poetry install --no-interaction
+
+      - name: Build Python package
+        run: poetry build

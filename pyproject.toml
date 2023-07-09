@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "vendor-models"
+version = "0.1.0"
+description = "Vendor CAD models"
+packages = [
+    {include = "vendor_models", from = "src"},
+]
+include = [
+    "vendor_models/resource/*",
+]
+authors = [
+    "Seth Fischer <seth@fischer.nz>",
+]
+readme = "README.rst"
+repository = "https://github.com/sethfischer/vendor-cad-files"
+keywords = [
+    "cad",
+    "cadquery",
+    "electronics",
+    "robot",
+    "robotics",
+    "step",
+]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Private :: Do not Upload",  # Prevent uploading to PyPI
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering",
+]
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/sethfischer/vendor-cad-files/issues"
+
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+
+cadquery = "^2.3.1"
+casadi = {version = "^3.5.6rc2", allow-prereleases = true}
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+mypy = "^1.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
