@@ -12,7 +12,7 @@ authors = [
     "Seth Fischer <seth@fischer.nz>",
 ]
 readme = "README.rst"
-repository = "https://github.com/sethfischer/vendor-cad-files"
+repository = "https://github.com/sethfischer/vendor-models"
 keywords = [
     "cad",
     "cadquery",
@@ -29,7 +29,7 @@ classifiers = [
     "Topic :: Scientific/Engineering",
 ]
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/sethfischer/vendor-cad-files/issues"
+"Bug Tracker" = "https://github.com/sethfischer/vendor-models/issues"
 
 
 [tool.poetry.dependencies]
